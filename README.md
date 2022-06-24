@@ -15,6 +15,8 @@ The biggest advantage for being able to refactor the original VBA script is  you
 ## VBA analysis challenge
 [VBA Analysis .zip](https://github.com/HuntDask/Stocks-Analysis/files/8981604/VBA.Analysis.zip)
 
+[VBA Challenge.xlsm.zip](https://github.com/HuntDask/Stocks-Analysis/files/8981611/VBA.Challenge.xlsm.zip)
+
 [VBA Resources.zip](https://github.com/HuntDask/Stocks-Analysis/files/8981605/VBA.Resources.zip)
 
 
