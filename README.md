@@ -66,37 +66,37 @@ Next i
 
 For i = 2 To RowCount
 
-    '7a) Increase volume for current ticker
+7a) Increase volume for current ticker
    
-    tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 9).Value
+tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 9).Value
     
-    '7b) Check if the current row is the first row with the selected tickerIndex.
-    If Cells(i - 1, 2).Value <> tickers(tickerIndex) Then
+'7b) Check if the current row is the first row with the selected tickerIndex.
+If Cells(i - 1, 2).Value <> tickers(tickerIndex) Then
         tickerStartingPrices(tickerIndex) = Cells(i, 7).Value
         
         
-    End If
+End If
     
-    '7c) check if the current row is the last row with the selected ticker
-    If Cells(i + 1, 2).Value <> tickers(tickerIndex) Then
-        tickerEndingPrices(tickerIndex) = Cells(i, 7).Value
+'7c) check if the current row is the last row with the selected ticker
+If Cells(i + 1, 2).Value <> tickers(tickerIndex) Then
+tickerEndingPrices(tickerIndex) = Cells(i, 7).Value
         
 
-        '7d Increase the tickerIndex.
-        tickerIndex = tickerIndex + 1
+'7d Increase the tickerIndex.
+tickerIndex = tickerIndex + 1
         
-    End If
+End If
 
 Next i
 
 '8) Loop through your arrays to output the Ticker, Total Daily Volume, and Return.
 For i = 0 To 11
     
-    Worksheets("All Stocks Analysis").Activate
-    tickerIndex = i
-    Cells(i + 4, 1).Value = tickers(tickerIndex)
-    Cells(i + 4, 2).Value = tickerVolumes(tickerIndex)
-    Cells(i + 4, 3).Value = tickerEndingPrices(tickerIndex) / tickerStartingPrices(tickerIndex) - 1
+Worksheets("All Stocks Analysis").Activate
+tickerIndex = i
+Cells(i + 4, 1).Value = tickers(tickerIndex)
+Cells(i + 4, 2).Value = tickerVolumes(tickerIndex)
+Cells(i + 4, 3).Value = tickerEndingPrices(tickerIndex) / tickerStartingPrices(tickerIndex) - 1
     
 Next i
 
